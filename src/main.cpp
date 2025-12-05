@@ -1,4 +1,4 @@
-#include "Game.hpp"
+#include "Game/Game.hpp"
 #include "Leaderboards/Leaderboards.hpp"
 #include "Menu/Menu.hpp"
 #include "Setup/Setup.hpp"
@@ -32,7 +32,7 @@ int main()
   sf::RenderWindow *pWindow = new sf::RenderWindow(sf::VideoMode(1600, 1000), "The Grand Prix");
   Menu *pMenu = new Menu;
   Setup *pSetup = new Setup;
-  pWindow->setFramerateLimit(60);
+  pWindow->setFramerateLimit(165);
   sf::Font font;
   font.loadFromFile("assets/fonts/JetBrainsMono.ttf");
 
@@ -218,7 +218,7 @@ void handleLeaderboards(sf::RenderWindow *pWindow, GameState &state)
 
 void handleSession(sf::RenderWindow *pWindow, GameState &state, int selectedTrack, int selectedCar)
 {
-  int tickrate = 32;
+  int tickrate = 1;
   float oldTime = 0;
 
   int carScale = 2.5;
